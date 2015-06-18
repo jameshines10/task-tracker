@@ -1,11 +1,11 @@
 {
-  "name": "aber-fitch-test",
+  "name": "task-tracker",
   "version": "0.1.0",
-  "homepage": "https://github.com/jameshines10/aber-fitch-test",
+  "homepage": "https://github.com/jameshines10/task-tracker",
   "authors": [
     "James Hines <jameshines10@gmail.com>"
   ],
-  "description": "Coding test for Abercrombie & Fitch",
+  "description": "Task Tracker Coding test for Abercrombie & Fitch",
   "moduleType": [
     "amd"
   ],
