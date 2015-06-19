@@ -5,27 +5,25 @@ body {
 #task-tracker-header, #container {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 #task-tracker-header {
     background-color: #e0e0e0;
+    padding-top: 5px;
 }
 
 #task-tracker-header div {
-    margin-top: 5px;
     width: 600px;
     height: 80px;
     font-family: sans-serif;
     background-color: #e8e8e8;
 }
 
-#task-tracker-header div div {
-    display: flex;
-    align-items: center;
+#task-tracker-header div {
+
 }
 
-#task-tracker-header div div h1, #task-tracker-header div div span {
+#task-tracker-header div h1, #task-tracker-header div span {
     margin: 0 0 0 20px;
 }
 
@@ -34,17 +32,10 @@ body {
 }
 
 #task-tracker {
-    background-color: gainsboro;
-    width: 600px;
-}
-
-#task-tracker > div:first-child span {
-    font-size: small;
-}
-
-#task-tracker > div:nth-child(2) {
     display: flex;
     flex-direction: row;
+    background-color: #e8e8e8;
+    width: 600px;
 }
 
 .list-tasks, .create-tasks {
@@ -54,12 +45,11 @@ body {
 }
 
 .create-tasks {
-    margin-right: 2.5px;
-    padding-left: 1em;
+    margin-right: 2px;
 }
 
 .list-tasks {
-    margin-left: 2.5px;
+    margin-left: 2px;
 }
 
 form label {
