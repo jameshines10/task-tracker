@@ -1,0 +1,61 @@
+body {
+    background-color: lightgrey;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#task-tracker {
+    background-color: gainsboro;
+    width: 600px;
+}
+
+#task-tracker > div:first-child {
+    font-family: sans-serif;
+    margin: 25px 0 25px 20px;
+}
+
+#task-tracker > div:first-child h1{
+    font-size: x-large;
+    margin: 0;
+}
+
+#task-tracker > div:first-child span {
+    font-size: small;
+}
+
+#task-tracker > div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-tasks, .create-tasks {
+    background-color: white;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.create-tasks {
+    margin-right: 2.5px;
+    padding-left: 1em;
+}
+
+.list-tasks {
+    margin-left: 2.5px;
+}
+
+form label {
+    display: block;
+    font-family: sans-serif;
+    font-size: x-small;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
