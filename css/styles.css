@@ -19,16 +19,18 @@ body {
     background-color: #e8e8e8;
 }
 
-#task-tracker-header div {
-
-}
-
-#task-tracker-header div h1, #task-tracker-header div span {
+#task-tracker-header div h1,
+#task-tracker-header div span {
     margin: 0 0 0 20px;
 }
 
 #task-tracker-header div h1{
     font-size: x-large;
+    font-weight: bold;
+}
+
+#task-tracker-header div span {
+    font-size: x-small;
 }
 
 #task-tracker {
@@ -46,6 +48,11 @@ body {
 
 .create-tasks {
     margin-right: 2px;
+}
+
+.create-tasks > div:first-child,
+.list-tasks > div:first-child {
+    padding: 1em 0 0 1em;
 }
 
 .list-tasks {
