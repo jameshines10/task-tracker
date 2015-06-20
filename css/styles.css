@@ -80,6 +80,7 @@ input[type = submit] {
     border-radius: 3px;
     width: auto;
     height: auto;
+    cursor: pointer;
 }
 
 form label {
@@ -102,5 +103,31 @@ ul {
 ul li {
     display: flex;
     flex-direction: row;
+    padding: 12px 10px;
+}
+
+ul li p {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+ul li p span {
+    font-size: small;
+    font-weight: normal;
+}
+
+ul li:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+ul li p:first-child {
+    font-family: serif;
+    flex-grow: 1;
+}
+
+ul li p:nth-child(2) {
+    font-size: smaller;
+    flex-grow: 1;
+    text-align: right;
 }
 
