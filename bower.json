@@ -20,5 +20,8 @@
   "dependencies": {
     "requirejs": "~2.1.18",
     "ractive": "~0.7.3"
+  },
+  "devDependencies": {
+    "jasmine-standalone": "~2.3.2"
   }
 }
