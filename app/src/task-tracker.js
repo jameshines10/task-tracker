@@ -6,31 +6,53 @@ define(['ractive', 'task-manager', 'fade'], function(Ractive, TaskManager, fade)
 
     return {
         init: function() {
+            taskManager = new TaskManager();
+
+            taskManager.loadTasks();
+
             taskTracker = new Ractive({
                 el: 'task-tracker',
                 template: '#main',
                 transitions: {
                     fade: fade
-                }
+                },
+                data: {
+                    task: {
+                        name: '',
+                        date: '',
+                        assigned: ''
+                    },
+                    tasks: taskManager.getTasks()
+                },
+                noIntro: true
             });
 
-            taskManager = new TaskManager();
-
-            taskManager.loadTasks();
-
-            taskTracker.set('tasks', taskManager.getTasks());
-
             taskTracker.on({
-                saveTask: function () {
-                    var task = {
-                        name: this.get('name'),
-                        date: this.get('date'),
-                        assigned: this.get('assignee')
-                    };
+                saveTask: function (event) {
+                    var name, date, assigned, task;
 
-                    taskManager.saveTask(task);
+                    name = event.context.name;
+                    date = event.context.date;
+                    assigned = event.context.assigned;
 
-                    this.get('tasks').push(task);
+                    // World class form validation right here buddy!
+                    if(name !== '' && date !== '' && assigned !== ''){
+                        task = {
+                            name: name,
+                            date: date,
+                            assigned: assigned
+                        };
+
+                        taskManager.saveTask(task);
+
+                        this.set('task', {
+                            name: '',
+                            date: '',
+                            assigned: ''
+                        });
+                    }
+
+                    event.original.preventDefault();
                 }
             })
         }

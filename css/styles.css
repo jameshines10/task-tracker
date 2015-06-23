@@ -36,6 +36,7 @@ body {
 
 #task-tracker-header div span {
     font-size: x-small;
+    color: #cacaca;
 }
 
 #task-tracker {
@@ -75,6 +76,7 @@ input {
     border-radius: 2px;
     width: 90%;
     height: 24px;
+    padding: 0 0 0 10px;
 }
 
 input[type = submit] {
@@ -123,6 +125,9 @@ ul li p span {
 
 ul li:nth-child(even) {
     background-color: #e0e0e0;
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+    border-bottom: solid 1px white;
 }
 
 ul li p:first-child {

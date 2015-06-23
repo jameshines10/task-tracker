@@ -25,7 +25,8 @@
             <div>
                 <p>Create a Task</p>
 
-                <form action="">
+                {{#with task}}
+                <form on-submit="saveTask">
                     <div>
                         <label for="task-name">Task Name</label>
                         <input id="task-name" value={{name}} type="text"/>
@@ -38,11 +39,12 @@
 
                     <div>
                         <label for="assignee">Assigned To</label>
-                        <input id="assignee" value={{assignee}} type="text"/>
+                        <input id="assignee" value={{assigned}} type="text"/>
                     </div>
 
-                    <input type="submit" value="Submit" on-click="saveTask"/>
+                    <input type="submit" value="Submit"/>
                 </form>
+                {{/with}}
             </div>
         </div>
 
