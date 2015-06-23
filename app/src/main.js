@@ -4,7 +4,7 @@ require.config({
     }
 });
 
-require(['task-manager', 'task-manager-view'], function(TaskManager, TaskManagerView){
-    TaskManagerView.init();
+require(['task-tracker'], function(TaskTracker){
+    TaskTracker.init();
 });
 

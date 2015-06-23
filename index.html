@@ -51,37 +51,19 @@
                 <p>Existing Tasks</p>
 
                 <ul>
-                    <li>
-                        <p>Task Name <span>12/07/2012</span></p>
-                        <p>John Doe</p>
-                    </li>
-                    <li>
-                        <p>Task Name <span>12/07/2012</span></p>
-                        <p>John Doe</p>
-                    </li>
-                    <li>
-                        <p>Task Name <span>12/07/2012</span></p>
-                        <p>John Doe</p>
-                    </li>
-                    <li>
-                        <p>Task Name <span>12/07/2012</span></p>
-                        <p>John Doe</p>
-                    </li>
-                    <li>
-                        <p>Task Name <span>12/07/2012</span></p>
-                        <p>John Doe</p>
-                    </li>
-                    <li>
-                        <p>Task Name <span>12/07/2012</span></p>
-                        <p>John Doe</p>
-                    </li>
-                    <li>
-                        <p>Task Name <span>12/07/2012</span></p>
-                        <p>John Doe</p>
-                    </li>
+                   {{#tasks:i}}
+                        {{>task}}
+                    {{/tasks}}
                 </ul>
             </div>
         </div>
+    </script>
+
+    <script id="task" type="text/ractive">
+         <li>
+            <p>{{name}} <span>{{date}}</span></p>
+            <p>{{assigned}}</p>
+        </li>
     </script>
 </div>
 

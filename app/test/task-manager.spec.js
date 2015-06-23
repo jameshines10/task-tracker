@@ -14,7 +14,7 @@ beforeEach(function(done){
 
 beforeEach(function () {
     store = {
-        'task-manager-tasks': [
+        'task-tracker-tasks': [
             {'name': 'Test Task #1', 'date': '12/01/2012', 'assigned': 'John Doe' },
             {'name': 'Test Task #2', 'date': '12/02/2012', 'assigned': 'John Doe' },
             {'name': 'Test Task #3', 'date': '12/03/2012', 'assigned': 'John Doe' }
@@ -22,11 +22,11 @@ beforeEach(function () {
     };
 
     spyOn(localStorage, 'getItem').and.callFake(function () {
-        return JSON.stringify(store['task-manager-tasks']);
+        return JSON.stringify(store['task-tracker-tasks']);
     });
 
     spyOn(localStorage, 'setItem').and.callFake(function () {
-        return store['task-manager-tasks'] = JSON.stringify([
+        return store['task-tracker-tasks'] = JSON.stringify([
             {'name': 'Test Task #1', 'date': '12/01/2012', 'assigned': 'John Doe' },
             {'name': 'Test Task #2', 'date': '12/02/2012', 'assigned': 'John Doe' },
             {'name': 'Test Task #3', 'date': '12/03/2012', 'assigned': 'John Doe' },
@@ -56,7 +56,7 @@ describe('the TaskManager class', function () {
     });
 
     it('should populate the tasks array with tasks if there are none in localStorage', function(){
-        store['task-manager-tasks'] = [];
+        store['task-tracker-tasks'] = null;
 
         _taskManager.loadTasks();
 
@@ -81,6 +81,8 @@ describe('the TaskManager class', function () {
         _taskManager.loadTasks();
 
         _taskManager.saveTask(task);
+
+        _taskManager.persist();
 
         expect(localStorage.setItem).toHaveBeenCalled();
 

@@ -15,7 +15,7 @@ define(function(){
         if (_localStorage) {
             _tasks = JSON.parse(_localStorage.getItem('task-manager-tasks'));
 
-            if(_tasks.length === 0) {
+            if(_tasks === null) {
                 _tasks = [
                     {'name': 'Test Task #1', 'date': '12/01/2012', 'assigned': 'John Doe' },
                     {'name': 'Test Task #2', 'date': '12/02/2012', 'assigned': 'John Doe' },
@@ -37,7 +37,9 @@ define(function(){
 
     TaskManager.prototype.saveTask = function(task) {
         _tasks.push(task);
+    };
 
+    TaskManager.prototype.persist = function() {
         _localStorage.setItem('task-manager-tasks', JSON.stringify(_tasks));
     };
 
