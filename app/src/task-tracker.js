@@ -1,14 +1,17 @@
 /**
  * Created by james on 6/23/15.
  */
-define(['ractive', 'task-manager'], function(Ractive, TaskManager){
+define(['ractive', 'task-manager', 'fade'], function(Ractive, TaskManager, fade){
     var taskTracker = null, taskManager = null;
 
     return {
         init: function() {
             taskTracker = new Ractive({
                 el: 'task-tracker',
-                template: '#main'
+                template: '#main',
+                transitions: {
+                    fade: fade
+                }
             });
 
             taskManager = new TaskManager();

@@ -1,6 +1,7 @@
 require.config({
     paths: {
-        ractive: '../../bower_components/ractive/ractive'
+        ractive: '../../bower_components/ractive/ractive',
+        fade: '../../bower_components/ractive-transitions-fade/dist/ractive-transitions-fade'
     }
 });
 

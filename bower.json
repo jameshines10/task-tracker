@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "requirejs": "~2.1.18",
-    "ractive": "~0.7.3"
+    "ractive": "~0.7.3",
+    "ractive-transitions-fade": "~0.2.1"
   }
 }
