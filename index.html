@@ -18,7 +18,9 @@
 
 <div id="container">
 
-    <div id="task-tracker">
+    <div id="task-tracker"></div>
+
+    <script id="main" type="text/ractive">
         <div class="create-tasks">
             <div>
                 <p>Create a Task</p>
@@ -39,7 +41,7 @@
                         <input id="assignee" type="text"/>
                     </div>
 
-                    <input type="submit"/>
+                    <input type="submit" value="Submit"/>
                 </form>
             </div>
         </div>
@@ -80,9 +82,9 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </script>
 </div>
 
-<script data-main="js/src/main" src="bower_components/requirejs/require.js"></script>
+<script data-main="app/src/main" src="bower_components/requirejs/require.js"></script>
 </body>
 </html>
