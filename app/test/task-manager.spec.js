@@ -82,8 +82,6 @@ describe('The TaskManager class', function () {
 
         _taskManager.saveTask(task);
 
-        _taskManager.persist();
-
         expect(localStorage.setItem).toHaveBeenCalled();
 
         expect(_taskManager.getTasks()).toEqual([
