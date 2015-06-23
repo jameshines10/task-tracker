@@ -37,9 +37,7 @@ define(function(){
 
     TaskManager.prototype.saveTask = function(task) {
         _tasks.push(task);
-    };
 
-    TaskManager.prototype.persist = function() {
         _localStorage.setItem('task-manager-tasks', JSON.stringify(_tasks));
     };
 

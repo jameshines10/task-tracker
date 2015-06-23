@@ -17,9 +17,19 @@ define(['ractive', 'task-manager'], function(Ractive, TaskManager){
 
             taskTracker.set('tasks', taskManager.getTasks());
 
-            taskTracker.observe('tasks', function () {
-                taskManager.persist();
-            });
+            taskTracker.on({
+                saveTask: function () {
+                    var task = {
+                        name: this.get('name'),
+                        date: this.get('date'),
+                        assigned: this.get('assignee')
+                    };
+
+                    taskManager.saveTask(task);
+
+                    this.get('tasks').push(task);
+                }
+            })
         }
     };
 });

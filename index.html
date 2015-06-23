@@ -28,20 +28,20 @@
                 <form action="">
                     <div>
                         <label for="task-name">Task Name</label>
-                        <input id="task-name" type="text"/>
+                        <input id="task-name" value={{name}} type="text"/>
                     </div>
 
                     <div>
                         <label for="date">Date</label>
-                        <input id="date" type="text"/>
+                        <input id="date" value={{date}} type="text"/>
                     </div>
 
                     <div>
                         <label for="assignee">Assigned To</label>
-                        <input id="assignee" type="text"/>
+                        <input id="assignee" value={{assignee}} type="text"/>
                     </div>
 
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="Submit" on-click="saveTask"/>
                 </form>
             </div>
         </div>

@@ -38,7 +38,7 @@ beforeEach(function () {
     });
 });
 
-describe('the TaskManager class', function () {
+describe('The TaskManager class', function () {
     it('should not pollute the global scope', function() {
         _taskManager.loadTasks();
 
