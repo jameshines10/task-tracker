@@ -5,7 +5,7 @@ var _taskManager = null;
 var store = {};
 
 beforeEach(function(done){
-    require(['../js/src/task-manager.js'], function(TaskManager){
+    require(['../app/src/task-manager.js'], function(TaskManager){
         _taskManager = new TaskManager();
 
         done();
