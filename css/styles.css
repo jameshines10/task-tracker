@@ -17,11 +17,16 @@ body {
     height: 80px;
     font-family: sans-serif;
     background-color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #task-tracker-header div h1,
 #task-tracker-header div span {
     margin: 0 0 0 20px;
+    width: 100%;
 }
 
 #task-tracker-header div h1{
@@ -57,7 +62,7 @@ body {
 
 .create-tasks > div:first-child,
 .list-tasks > div:first-child {
-    padding: 1em 1em 0 1em;
+    padding: 1em 1em 3em 1em;
 }
 
 .list-tasks {
